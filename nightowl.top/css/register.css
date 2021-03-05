@@ -1,0 +1,485 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("../images/background/气泡弧线_WPS图片.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#myForm {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px #bca7e7 solid;
+    border-radius: 2px;
+    box-shadow: 0px 2px 10px #9194eb;
+}
+
+#myForm #caption {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Cooper";
+    color: #243194;
+    font-size: 20px;
+    transform: translateX(-50%);
+}
+
+#myForm>div {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+#myForm label {
+    font-weight: bold;
+    color: #b2c3eb;
+    line-height: 28px;
+}
+
+#myForm input {
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 300px;
+    line-height: 28px;
+    text-align: left;
+    padding: 5px 10px;
+    border: 1px #b1c4ee solid;
+    border-radius: 20px;
+    font-weight: 500;
+    outline: none;
+    color: #dbdfe9;
+    margin-left: 10px;
+}
+
+#myForm input:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 1px #243194;
+}
+
+#myForm input::-webkit-input-placeholder {
+    color: #969eec;
+}
+
+#myForm .btn {
+    box-sizing: border-box;
+    background-color: #628be3c7;
+    border: 1px #99acee solid;
+    color: #b2c3eb;
+    width: 80px;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#myForm .btn-active {
+    background-color: #5260e2b9;
+    color: whitesmoke;
+    border: 1px #9bdcdf solid;
+}
+
+#myForm .btn:focus {
+    background-color: #5260e2b9;
+    color: whitesmoke;
+    border: 1px #9bdcdf solid;
+    cursor: pointer;
+}
+
+#myForm .select-phone {
+    margin-left: 65px;
+}
+
+#myForm .select-email {
+    margin-left: 30px;
+}
+
+#myForm .select-box {
+    position: relative;
+    height: 40px;
+    transform-style: preserve-3d;
+    transition-property: transform;
+    transition-duration: .6s;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: .6s;
+    -moz-transition-property: transform;
+    -moz-transition-duration: .6s;
+    -o-transition-property: transform;
+    -o-transition-duration: .6s;
+    transform: rotateX(0deg);
+}
+
+#myForm .select-way {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 5px 0px 5px 10px;
+    width: 97.5%;
+    height: 40px;
+}
+
+#myForm .select-box div:first-child {
+    background-color: #585ce2a1;
+    transform: translateZ(25px);
+}
+
+#myForm .select-box div:last-child {
+    background-color: #9372e3a1;
+    transform: translateY(25px) rotateX(-90deg);
+}
+
+#myForm .validate-box {
+    width: 95%;
+    background-color: #776adc;
+}
+
+#myForm input[id="validate-way"] {
+    width: 40%;
+}
+
+#myForm .validate-get {
+    width: 30%;
+    font-size: 12px;
+}
+
+#myForm .form-bar {
+    margin: 20px 0px 10px;
+}
+
+#myForm .form-bar input {
+    margin-left: 26px;
+}
+
+#myForm .form-bar input[type="submit"] {
+    width: 120px;
+}
+
+
+/*人机验证panel*/
+
+.before-send {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    border: 1px red solid;
+    background-color: white;
+}
+
+.before-send-top {
+    height: 40px;
+    margin-top: 5px;
+}
+
+.before-send-top div {
+    float: left;
+    margin-left: 10px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.before-send-top div span {
+    color: #3685e7;
+}
+
+.before-send-top img {
+    width: 120px;
+    height: 40px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.before-send-body {
+    padding: 5px;
+    width: 280px;
+    height: 280px;
+}
+
+.before-send-body .validate-zone {
+    position: relative;
+    background-image: url("");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: default;
+}
+
+.before-send-body .validate-zone .item-box {
+    position: absolute;
+}
+
+.before-send-body .validate-zone .item-text {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-image: url("../images/validate/icons/模糊背景图片.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* transform: translate(-50%, -50%); */
+}
+
+.before-send-body .validate-zone .validate-order {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #539ffe;
+    border: 3px white solid;
+    font-size: 18px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+.before-send-body .validate-zone .validate-tooMuch {
+    position: absolute;
+    width: 96%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px #d4d4d4 solid;
+    border-radius: 2px;
+    z-index: 3;
+    box-shadow: 0px 3px 6px 0px #9eace2;
+}
+
+.before-send-body .validate-zone .tooMuch-icon {
+    background-image: url(../images/validate/icons/减号.png);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px #e75870;
+}
+
+.before-send-body .validate-zone .tooMuch-text {
+    width: 100%;
+    height: 30px;
+    margin-top: 60px;
+    text-align: center;
+    line-height: 30px;
+    color: #909090;
+}
+
+.before-send-body .validate-zone .tooMuch-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    height: 36px;
+    width: 96%;
+    border-radius: 2px;
+    background-color: #808cfc;
+    color: #e8ebf4;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.before-send-body .validate-zone .tooMuch-btn:hover {
+    background-color: #6c78e4;
+}
+
+.before-send-bottom {
+    height: 30px;
+    padding: 5px;
+}
+
+.before-send-bottom #validate-close {
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/validate/icons/关闭.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.before-send-bottom #validate-close:hover:before {
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 14px;
+    content: '';
+    border-style: solid;
+    border-width: 4px 6px;
+    border-color: #5F5F5F transparent transparent #5F5F5F;
+    width: 0;
+    height: 0;
+    z-index: 999;
+}
+
+.before-send-bottom #validate-close:hover:after {
+    display: block;
+    position: absolute;
+    width: 48px;
+    line-height: 22px;
+    padding: 0px 4px;
+    font-size: 12px;
+    height: 22px;
+    left: 14px;
+    top: -26px;
+    content: '关闭验证';
+    color: #f7f7f7;
+    background-color: #5f5f5f;
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.before-send-bottom #validate-refresh {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/validate/icons/刷新\(1\).png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.before-send-bottom #validate-refresh:hover:before {
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 14px;
+    content: '';
+    border-style: solid;
+    border-width: 4px 6px;
+    border-color: #5F5F5F transparent transparent #5F5F5F;
+    width: 0;
+    height: 0;
+    z-index: 999;
+}
+
+.before-send-bottom #validate-refresh:hover:after {
+    display: block;
+    position: absolute;
+    width: 48px;
+    line-height: 22px;
+    padding: 0px 4px;
+    font-size: 12px;
+    height: 22px;
+    left: 14px;
+    top: -26px;
+    content: '刷新验证';
+    color: #f7f7f7;
+    background-color: #5f5f5f;
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.before-send-bottom #validate-submit {
+    float: right;
+    width: 80px;
+    height: 100%;
+    margin-top: -2.5px;
+    color: #c5d4fb;
+    background-color: #808cfc;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.before-send .validate-result-success {
+    position: absolute;
+    background-color: greenyellow;
+    color: green;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    z-index: 2;
+    bottom: 0px;
+    animation: upFloat 2s;
+}
+
+.before-send .validate-result-fail {
+    position: absolute;
+    background-color: #f9cac2;
+    color: #f13a3a;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    z-index: 2;
+    bottom: 0px;
+    animation: upFloat 1.5s;
+}
+
+.before-send-bottom #validate-submit:hover {
+    box-sizing: border-box;
+    background-color: #5e6df3;
+}
+
+
+/*增加动画效果*/
+
+@keyframes upFloat {
+    0% {
+        bottom: -20px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes tremble {
+    10% {
+        transform: translateX(-20px);
+    }
+    20% {
+        transform: translateX(20px);
+    }
+    30% {
+        transform: translateX(-15px);
+    }
+    40% {
+        transform: translateX(15px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
+    70% {
+        transform: translateX(-5px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+    90% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

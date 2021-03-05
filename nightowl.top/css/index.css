@@ -1,0 +1,135 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+input,
+button {
+    outline: none;
+}
+
+select {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+body {
+    background-image: url("../images/background/index-background.jpg");
+    background-size: 100% 100%;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+#header #mylogo {
+    position: absolute;
+    left: 2%;
+    top: 12%;
+}
+
+#header #mylogo image {
+    height: 72px;
+    width: 128px;
+    opacity: 0.8;
+}
+
+#header #selectbar {
+    float: right;
+    width: 400px;
+    height: 100%;
+}
+
+#header #selectbar .topbar {
+    float: left;
+    margin-left: 15px;
+}
+
+#header .topbar {
+    margin-top: 10px;
+}
+
+#header select,
+#header button {
+    font-size: 14px;
+    color: white;
+    background-color: #7468ca;
+    border-radius: 3px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#header select:hover,
+#header button:hover {
+    background-color: #0a287c;
+    /* color: #0a287c; */
+}
+
+#contain {
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* #contain #tips {
+    margin-top: 30px;
+    font-size: 60px;
+    color: #dddd74;
+} */
+
+.upload_bp input[type='file'] {
+    display: none;
+}
+
+footer>div {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
+    font-size: 14px;
+    color: #0a287c;
+}
+
+footer>div div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0a287c;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.advertise img {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.6;
+    border-radius: 20px;
+}

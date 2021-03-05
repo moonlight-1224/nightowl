@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="凌空暗羽--个人图床；学习；探索；工具；应用">
+    <meta name="discription" content="凌空暗羽--个人首页">
+    <title>凌空暗羽个人图床</title>
+    <link rel="shotcut icon" href="./icons/favicon.ico" />
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+     <script type="text/javascript" src="./javascript/index.js"></script>
+    <div id="header">
+        <div id="selectbar">
+            <ul>
+                <li class="topbar"><button>
+                    <form method="POST" action="./php/upload_images.php" enctype="multipart/form-data">
+                        <div>
+                            <label class="upload_bp" for="file_upload">
+                                 <input type="file" id="file_upload" onchange="upload()" name="image" accept="image/bmp,image/png,image/pjpeg,image/gif"><!--需要使用pjpeg转义成jpg-->
+                                 <p>上传图片</p>
+                             </label>
+                        </div>
+                    </form>
+                </button></li>
+                <li class="topbar"><button onclick="newLocation('./html/login.html')">登录</button></li>
+                <li class="topbar"><button onclick="newLocation('./html/register.html')">用户注册</button></li>
+                <li class="topbar">
+                    <select>
+                        <option value="关于我们" selected>关于我们</option>
+                        <option value="服务条款">服务条款</option>
+                        <option value="隐私保护">隐私保护</option>
+                        <option value="联系我们">联系我们</option>
+                        <option value="上传插件">上传插件</option>
+                        <option value="服务状态">服务状态</option>
+                        <option value="付费套餐">付费套餐</option>
+                        <option value="电商图床">电商图床</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="contain">
+        <!-- <div id="tips">免费图片上传</div> -->
+
+    </div>
+    <footer>
+        <div>
+            <div>2021-2022 nightowl.top凌空暗羽个人图床</div>
+            <div><a href="https://beian.miit.gov.cn/#/Integrated/index">备案号：鄂ICP备2021000904号-1</a></div>
+        </div>
+    </footer>
+    <div class="advertise">
+        <a href="https://curl.qcloud.com/fQNqNWl2"><img src="./images/advertise/advertise1.jpg" /></a>
+    </div>
+   
+</body>
+
+</html>
