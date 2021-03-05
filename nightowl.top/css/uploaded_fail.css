@@ -1,0 +1,136 @@
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    position: relative;
+    background-image: url("../images/background/uploaded_succee-background.jpg");
+    background-size: 100% 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.img-tip {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    animation: comein 2s;
+}
+
+.feedback {
+    position: absolute;
+    bottom: -450px;
+    left: 40%;
+    width: 520px;
+    height: 520px;
+    transform: translateX(-50%);
+    animation: upFloat 3s ease 1s forwards;
+    background-image: url("../images/background/素材气球.png");
+    background-size: 100% 100%;
+}
+
+.tip-text {
+    position: absolute;
+    left: 50%;
+    height: 26px;
+    width: 60px;
+    bottom: 67px;
+    transform: translate(-63%, -47%);
+    color: #adaaaa;
+    background-color: #e3e0f8;
+    border: 1px #61677b solid;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px #2b2a2a;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tip-text:hover {
+    background-color: #d872d3;
+    box-shadow: 0px 1px 3px #b367af;
+    color: white;
+}
+
+.backwords button {
+    display: none;
+    position: absolute;
+    left: 39.5%;
+    top: 68%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px #628bb9 solid;
+    color: #adaabb;
+    border-radius: 3px;
+    background-image: linear-gradient(#ccdbfc, #c2eff4);
+    animation: flickering 3s 1s ease;
+    cursor: pointer;
+}
+
+.backwords button:hover {
+    background-image: none;
+    background-color: #d872d3;
+    box-shadow: 0px 1px 3px #b367af;
+    color: white;
+}
+
+
+/*动画部分*/
+
+@keyframes comein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes upFloat {
+    0% {
+        bottom: -450px;
+    }
+    100% {
+        bottom: 180px;
+    }
+}
+
+@keyframes flickering {
+    0% {
+        opacity: 0.2;
+    }
+    12.5% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    37.5% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    62.5% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
