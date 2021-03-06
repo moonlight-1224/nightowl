@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="凌空暗羽--个人图床；学习；探索；工具；应用">
+    <meta name="discription" content="凌空暗羽--注册页面">
+    <link rel="shotcut icon" href="../icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <title>凌空暗羽--用户注册</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <div id="caption">
+            <caption>Nightowl register</caption>
+        </div>
+        <div>
+            <label for="usr-name">用户名称：</label><input id="usr-name" placeholder="请输入用户名称" type="text" />
+        </div>
+        <div>
+            <label for="usr-password">用户密码：</label><input id="usr-password" type="password" placeholder="请输入用户密码" />
+        </div>
+        <div>
+            <label for="usr-dbpassword">重复密码：</label><input id="usr-dbpassword" type="password" placeholder="请再次输入密码" />
+        </div>
+        <div>
+            <label>验证方式：</label><input class="btn btn-active select-phone" onclick="selectToPhone()" type="button" value="手机验证" />
+            <input class="btn select-email" onclick="selectToEmial()" type="button" value="邮箱验证" />
+        </div>
+
+        <div class="select-box">
+            <div class="select-way">
+                <label for="usr-phone">电话号码：</label><input id="usr-phone" type="text" placeholder="请输入电话号码" />
+            </div>
+            <div class="select-way">
+                <label for="usr-email">用户邮箱：</label><input id="usr-email" type="text" placeholder="请输入邮箱地址" />
+            </div>
+        </div>
+        <div class="validate-box">
+            <label for="validate-way">手机验证：</label>
+            <input id="validate-way" type="text" placeholder="请输入验证码 " />
+            <input class="btn validate-get" type="button" value="点击获取验证码" onclick="getValidation()" />
+        </div>
+
+
+        <div class="form-bar">
+            <input type="button" class="btn" value="返回登录" onclick="navigationTo('login.html')" /><input class="btn" type="submit" value="提交注册" />
+            <input type="reset" class="btn" value="重置" />
+        </div>
+    </form>
+    <div class="before-send">
+        <div class="before-send-top">
+            <div>请在下图<span>依次</span>点击:</div>
+            <img src="" />
+        </div>
+        <div class="before-send-body">
+            <div class="validate-zone" onclick="zoneClick()">
+                <div class='validate-tooMuch'>
+                    <div class="tooMuch-icon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="before-send-bottom">
+            <div id="validate-close" onclick="closeValidation()"></div>
+            <div id="validate-refresh" onclick="refreshValidation()"></div>
+            <div id="validate-submit" onclick="submitValidation()">确认</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../javascript//register.js"></script>
+</body>
+
+</html>
